@@ -1,0 +1,33 @@
+
+h1{
+    color:blue;
+    text-align: center;
+    font-style: italic;
+    
+    } 
+ .bb{
+        color:blue;
+        padding-top: 13px;
+        padding-bottom: 10px;
+        padding-right: 10px;
+        padding-left: 10px;
+        
+margin-bottom: 10px;
+border-color: blue;
+font-style: initial;
+background-color:transparent;
+    
+    
+    }
+    .bb:hover{
+        background-color: cadetblue;
+    }
+    .txt{
+        width:25%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: none;
+        border-bottom: 2px solid blue;
+    }
+    

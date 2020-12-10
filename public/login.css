@@ -1,0 +1,43 @@
+
+h1{
+color:red;
+text-align: center;
+font-style: italic;
+
+} 
+button{
+    color:red;
+    padding-top: 13px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+
+
+}
+
+body{
+    background-image:url("C:/Users/ELCOT/Desktop/CLASSROOM/image/index.jpg");
+    opacity:100;
+}
+
+.container1{
+    display: flex;
+}
+.but1{
+margin-bottom: 10px;
+border-color: red;
+font-style: initial;
+background-color:transparent;
+
+}
+.but1:hover{
+    margin-bottom: 10px;
+    border-color: red;
+    font-style: initial;
+    background-color:pink;
+    
+    
+    }
+
+   
+/*--------------------------------------------------------------*/

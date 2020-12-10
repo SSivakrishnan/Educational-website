@@ -1,1 +1,2 @@
 # Educational-website
+$install

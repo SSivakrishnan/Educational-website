@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+div#test{ border:#000 1px solid; padding:10px 40px 40px 40px; }
+p{
+	font-style:italic;
+	font-size: 30px;
+	color: orange;
+}
+
+.but{
+background-color: transparent;
+padding-top: 13px;
+        padding-bottom: 10px;
+        padding-right: 10px;
+		padding-left: 10px;
+		border-color: orange;
+        color:rgb(160, 121, 49);
+	}
+	.but:hover{
+		background-color: orange;
+		border-color: orange;
+        color:white;
+	}
+	h1{
+		color: crimson;
+	}
+	h2{
+		color: orange;
+	}
+</style>
+
+<br><br>
+<script>
+var pos = 0, test, test_status, question, choice, choices, chA, chB, chC, correct = 0;
+var questions = [
+    [ "<p>Who is the founder of Python ?</p>", "Brendan Eich<br>", "Steve Millidge<br>", "Guido Van Rossum<br>", "C" ],
+	[ "<p>Select the reserved keyword in python?</p>", "reserved<br>", "raise<br>", "test<br>", "B" ],
+	[ "<p>Which keyword is used to define method in python?</p>", "function<br>", "def<br>", "method<br>", "B" ],
+	[ "<p>Which symbol used for comments in python?</p>", "//<br>", "$<br>", "#<br>", "C" ],
+	[ "<p>What is the latest version of python?</p>", "3.7.4<br>", "8.2.2<br>", "3.6.9<br>", "A" ]
+];
+function _(x){
+	return document.getElementById(x);
+}
+function renderQuestion(){
+	test = _("test");
+	if(pos >= questions.length){
+		test.innerHTML = "<h2>You got "+correct+" out of  " +questions.length+ " questions</h2> ";
+		_("test_status").innerHTML = "<h1>Test Completed</h1>";
+		pos = 0;
+		correct = 0;
+		return false;
+	}
+	_("test_status").innerHTML = " Question "+(pos+1)+" of "+questions.length;
+	question = questions[pos][0];
+	chA = questions[pos][1];
+	chB = questions[pos][2];
+	chC = questions[pos][3];
+	test.innerHTML = "<h3>"+question+"</h3>";
+	test.innerHTML += "<input type='radio' name='choices' value='A'> "+chA+"<br>";
+	test.innerHTML += "<input type='radio' name='choices' value='B'> "+chB+"<br>";
+	test.innerHTML += "<input type='radio' name='choices' value='C'> "+chC+"<br><br>";
+	test.innerHTML += "<button onclick='checkAnswer()' class='but'>Submit Answer</button>";
+}
+function checkAnswer(){
+	choices = document.getElementsByName("choices");
+	for(var i=0; i<choices.length; i++){
+		if(choices[i].checked){
+			choice = choices[i].value;
+		}
+	}
+	if(choice == questions[pos][4]){
+		correct++;
+	}
+	pos++;
+	renderQuestion();
+}
+window.addEventListener("load", renderQuestion, false);
+</script>
+
+</head>
+<body>
+<h2 id="test_status"></h2>
+<div id="test"></div>
+</body>
+</html>

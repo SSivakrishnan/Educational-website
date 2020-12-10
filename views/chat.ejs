@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head><title>chat</title></head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="well">
+                    <h3>Online Users</h3>
+                    <ul class="list-group" id="users"></ul>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="chat" id="chat"></div>
+                <form id="messageForm">
+                    <div class="form-group">
+                        <label>Enter message</label>
+                        <textarea class="form-control" id="message"></textarea><br>
+                        <input type="submit" class="btn btn-primary" value="Send Message"/>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script> $(function(){
+        var socket=io.connect();
+        var $messageForm=$('#messageForm');
+        var $message=$('#message');   
+        var $chat=$('#chat');
+
+        $messageForm.submit(function(e){
+            e.preventDefault();
+            socket.emit('send message',$message.val());
+            $message.val('');
+
+        })
+    });
+
+    </script>
+</body>
+    </html>

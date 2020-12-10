@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+<title>
+    index
+</title>
+
+<link  href="/login.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <section>    <br><br><br><br><br><br>
+        <br><br><br><br> <br><br><br><br>
+    <div class="container-1">
+    
+<center>
+    <h2>WELCOME</h2>>
+<form action="home">
+<button class='but1'>STUDENT</button></form>
+<form action="loginstaff">
+<button class='but1'>STAFF</button><br></form>
+
+</center></section>
+<style>
+ 
+ @import 'https://fonts.googleapis.com/css?family=Lato:100';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+    font-family: "Lato",Arial, Helvetica, sans-serif;
+
+}
+
+section{
+    width: 100%;
+    height: 100vh;
+    color:#fff;
+    background: linear-gradient(.45deg,#ee7752,#e73c73,#23a6d5,#23d5ab);
+    background-size:400% 400%;
+    position: relative;
+    animation: change 10s  ease-in-out infinite; 
+}
+
+h1{
+font-size: 5rem;
+text-transform: uppercase;
+letter-spacing: 2px;
+border: 3px solid #fff;
+position: absolute;
+top:50%;
+left:50%;
+transform: translate(-50%,-50%);
+padding: 5rem 10rem;
+
+}
+
+@keyframes change{
+    0%{
+        background-position: 0 50%;
+
+    }
+
+      50%{
+
+      background-position: 100% 50%;
+
+      }
+100%{
+    background-position: 0 50%;
+}
+}
+
+
+h2{
+    position: relative;
+    font-family: sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 4em;
+    letter-spacing: 4px;
+    overflow: hidden;
+    background: linear-gradient(90deg,red,orange,yellow,orange,red);
+    background-repeat:no-repeat;
+    background-size :80%; 
+    animation: animate 3s linear infinite;
+    -webkit-background-clip: text;
+        -webkit-text-fill-color:transparent;
+    }
+    
+    @keyframes animate
+    {
+    0%{
+    background-position: -300%;
+    }
+    100%{
+    
+        background-position: 300%;
+    }
+    }
+
+</style>
+</body>
+</html>
